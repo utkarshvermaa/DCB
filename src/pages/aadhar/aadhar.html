@@ -14,15 +14,38 @@
 
 
 <ion-content padding>
-  <ion-card>
-  <ion-card-content>
-    Aadhar Card: {{barcodeData}}
-  </ion-card-content>
-  </ion-card>
+
+  <ion-item>
+    <ion-input type="text" placeholder="Enter Aadhar Number" [(ngModel)]="aadharData"></ion-input>
+  </ion-item>
+  
   
   <div class="aadhar" >
     <button ion-button (click)="scanAadhar()" style=" top: 80%;">Scan Aadhar</button>
+    <button ion-button (click)="createCode()" style=" top: 80%;">Create Code</button>
   </div>
+
+  <div class = "data">
+     <ion-card>
+    <ion-card-content>
+     Aadhar Card: {{scannedAadhar}}
+    </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-card *ngIf="createdCode">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p>Value: {{createdCode}} </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="createdCode">
+    <ion-card-content>
+      Result from Scan: {{barcodeData}}
+    </ion-card-content>
+  </ion-card>
+ 
 
 
 </ion-content>
