@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { AadharPage } from '../pages/aadhar/aadhar';
 import { DlPage } from '../pages/dl/dl';
 import { PanPage } from '../pages/pan/pan';
+import { MyYodleePage } from '../pages/my-yodlee/my-yodlee'
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Aadhar', component: AadharPage },
       { title: 'Driving License', component: DlPage },
-      { title: 'PAN Card', component: PanPage }
+      { title: 'PAN Card', component: PanPage },
+      { title: 'My Yodlee', component: MyYodleePage }
     ];
 
   }
