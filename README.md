@@ -1,34 +1,26 @@
-# Ionic 2 QRScanner Sample Application
+This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-This is a sample Barcode Scanner application built on [Ionic 2](https://github.com/driftyco/ionic) and that uses [Ionic Native](https://github.com/driftyco/ionic-native)
+## How to use this template
 
-## Setup
+*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
 
-To setup this application locally, you'll have to clone the repository and install all the required libraries and plugins. Thankfully, Ionic provides an easy way with Ionic state
+To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
 
-__NOTICE__: make sure you have Ionic 2 Cli installed (`npm install -g ionic@latest`)
+### With the Ionic CLI:
 
-__NOTICE__: make sure you have Cordova Cli installed (`npm install -g cordova`)
+Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
 
-Steps:
+```bash
+$ sudo npm install -g ionic cordova
+$ ionic start mySideMenu sidemenu
+```
 
-- `git clone https://github.com/jadsalhani/ionic2-qrscanner-example.git`
-- `cd ionic2-qrscanner-example`
-- `npm install`
-- `ionic state restore` (Check out [Ionic State](https://github.com/driftyco/ionic-cli#ionic-state))
+Then, to run it, cd into `mySideMenu` and run:
 
-After these commands, your application is all ready to be built and deployed to the platform of your choice.
+```bash
+$ ionic cordova platform add ios
+$ ionic cordova run ios
+```
 
-_WINDOWS NOTICE_: For those who have a Windows machine, the `ionic platform add ios` command will fail when running `ionic state restore`.
+Substitute ios for android if not on a Mac.
 
-_ANDROID NOTICE_: For those who would like to build on Android, just simply run `ionic platform add android` after `ionic state restore` finishes to add the platform.
-
-## Project Structure
-
-It provides also some extra components to give it a little flavor:
-- Login page template
-- Event list page in case more than one QR should be scanned.
-- Scan page template that scans a QRCode
-- Scan result page that displays the Barcode/QR result after scanning
-- Basic HTTP service to make API calls which comprises some helper methods
-- Basic User Service to handle logging-in and simulating sessions

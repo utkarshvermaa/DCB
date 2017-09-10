@@ -1,39 +1,44 @@
-import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
 import { MyApp } from './app.component';
-import { ScanPage } from '../pages/scan/scan';
-import { ScanResultPage } from '../pages/scan-result/scan-result';
-import { Api } from '../providers/api';
-import { User } from '../providers/user';
-import { StatusBar } from "@ionic-native/status-bar";
-import { SplashScreen } from "@ionic-native/splash-screen";
-import { BarcodeScanner } from "@ionic-native/barcode-scanner";
+import { HomePage } from '../pages/home/home';
+// import { ListPage } from '../pages/list/list';
+import { AadharPage } from '../pages/aadhar/aadhar';
+import { DlPage } from '../pages/dl/dl';
+import { PanPage } from '../pages/pan/pan';
+
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
     MyApp,
-    ScanPage,
-    ScanResultPage
+    HomePage,
+    AadharPage,
+    DlPage,
+    PanPage
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ScanPage,
-    ScanResultPage
+    HomePage,
+    AadharPage,
+    DlPage,
+    PanPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler },
-    Api,
-    User,
+  providers: [
     StatusBar,
     SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner
   ]
 })
-export class AppModule { }
+export class AppModule {}
