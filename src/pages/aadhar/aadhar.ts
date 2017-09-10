@@ -19,7 +19,7 @@ export class AadharPage {
 
   options: BarcodeScannerOptions;
   aadharData: null;
-  scannedAadhar = null;
+  scannedAadhar = "Full Power";
 
 
   constructor(private barcodeScanner: BarcodeScanner, public navCtrl: NavController) {

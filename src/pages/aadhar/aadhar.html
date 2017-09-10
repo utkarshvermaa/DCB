@@ -7,16 +7,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Aadhar</ion-title>
+    <ion-title align = "center">Aadhar Verificatoin</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+  <ion-card-content>
+    Aadhar Card: {{barcodeData}}
+  </ion-card-content>
+  </ion-card>
+  
   <div class="aadhar" >
     <button ion-button (click)="scanAadhar()" style=" top: 80%;">Scan Aadhar</button>
   </div>
-  
+
 
 </ion-content>

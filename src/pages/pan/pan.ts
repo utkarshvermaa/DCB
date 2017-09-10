@@ -12,14 +12,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-pan',
   templateUrl: 'pan.html',
+
 })
 export class PanPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  PanID: any;
+
+  constructor( public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PanPage');
+  }
+
+  scanPan(){
+    console.log(this.PanID);
   }
 
 }

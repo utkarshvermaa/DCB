@@ -7,12 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>PAN</ion-title>
+    <ion-title align = "center">PAN Verification</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <div class="aadhar" >
+    <ion-item>
+      <ion-label color="primary" stacked>Enter PAN Id: </ion-label>
+      <ion-input type="string" placeholder="PAN ID" [(ngModel)] = "PanID" ></ion-input>
+  </ion-item>
+    <button ion-button (click)="scanPan()" style=" top: 80%;">Validate PAN</button>
+  </div>
 
 </ion-content>
